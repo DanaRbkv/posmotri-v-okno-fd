@@ -67,9 +67,9 @@ ol {
 
 .content__list-container {
   max-height: 298px;
-  overflow-y: auto;
-  overflow-x: hidden;
+  overflow: auto;
   position: relative;
+  gap: 30px;
 }
 
 /* Кастомный скроллбар */
@@ -108,10 +108,6 @@ ol {
 .content__list {
   display: flex;
   flex-direction: column;
-  gap: 30px;
-}
-
-.content__list-container {
   gap: 30px;
 }
 
@@ -167,11 +163,11 @@ ol {
 
 .content__video-card-description {
   display: -webkit-box;
-  -webkit-line-clamp: 3;         
+  -webkit-line-clamp: 4;         
   -webkit-box-orient: vertical;  
   overflow: hidden;               
   text-overflow: ellipsis;
-  line-clamp: 3;
+  line-clamp: 4; 
   font-family: Fira Sans Condensed, sans-serif;
   font-weight: 400;
   font-size: 18px;
@@ -189,6 +185,12 @@ ol {
   clip: rect(0 0 0 0);
   clip-path: inset(50%);
   white-space: nowrap;
+}
+
+.search-form {
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
 }
 
 .search-form__checkbox-list {
@@ -212,7 +214,6 @@ ol {
   border-left: none;
   border-right: none;
   background-color: transparent;
-  border-color: rgb(255 255 255 / 0.7);
   appearance: none;
   font-family: "Fira Sans Condensed", sans-serif;
   font-weight: 400;
@@ -235,7 +236,7 @@ ol {
 }
 
 .search-form__label:has(:focus-visible) {
-  outline: 1px solid #fff;
+  outline-offset: 1px solid #fff;
 }
 
 .search-form__pseudo-checkbox {
@@ -274,8 +275,6 @@ ol {
   border: 1px solid #fff;
   min-width: 194px;
   height: 34px;
-  top: 20px;
-  left: 398px;
   gap: 10px;
   font-family: Fira Sans Condensed, sans-serif;
   font-weight: 700;
@@ -283,7 +282,11 @@ ol {
   line-height: 100%;
   text-align: center;
   color: #fff;
-  cursor: pointer
+  cursor: pointer;
+}
+
+.search-form__submit-button {
+  align-self: flex-end;
 }
 
 .more-button {
@@ -304,27 +307,28 @@ ol {
 }
 
 .button:focus-visible {
-  outline: 1px solid #fff
+  outline-offset: 1px solid #fff
 }
 
 .content__card-link {
   display: block;
-  cursor: pointer
+  cursor: pointer;
 }
 
 .content__card-link_current {
   background-color: #545050;
+  cursor: pointer;
 }
 
 .content__card-link:active {
   background-color: #545050;
 }
 
-.content_card-link:focus {
+.content__card-link:focus {
   outline: none;
 }
 
-.content_card-link:focus-visible {
+.content__card-link:focus-visible {
   outline: 1px solid #fff;
 }
 
