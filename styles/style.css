@@ -66,7 +66,7 @@ ol {
 }
 
 .content__list-container {
-  max-height: 298px;
+  height: 298px;
   overflow: auto;
   position: relative;
   gap: 30px;
@@ -211,6 +211,7 @@ ol {
 }
 
 .search-form__textfield {
+  color: rgba(255, 255, 255, 0.7);
   border-left: none;
   border-right: none;
   background-color: transparent;
@@ -221,8 +222,8 @@ ol {
   line-height: 21.6px;
   border-top: 1px solid #fff;
   border-bottom: 1px solid #fff;
-  width: 211px;
-  height: 22px;
+  width: 225px;
+  height: 27px;
   -webkit-appearance: none;
   appearance: none;
 }
@@ -236,7 +237,8 @@ ol {
 }
 
 .search-form__label:has(:focus-visible) {
-  outline-offset: 1px solid #fff;
+  outline: 1px solid #fff;
+  outline-offset: 1px;
 }
 
 .search-form__pseudo-checkbox {
@@ -307,7 +309,8 @@ ol {
 }
 
 .button:focus-visible {
-  outline-offset: 1px solid #fff
+  outline: 1px solid #fff;
+  outline-offset: 1px;
 }
 
 .content__card-link {
@@ -326,6 +329,12 @@ ol {
 
 .content__card-link:focus {
   outline: none;
+}
+
+.content__card-link:hover {
+  text-decoration: underline;
+  text-decoration-color: #fff;
+  cursor: pointer;
 }
 
 .content__card-link:focus-visible {
